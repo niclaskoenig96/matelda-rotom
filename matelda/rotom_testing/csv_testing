@@ -1,0 +1,45 @@
+def process_entries(entries, output_csv):
+    # Prepare a list to store processed rows
+    processed_rows = []
+    headers = None
+
+    for entry in entries:
+        csv_path, clean_path, row_number, column_index = entry
+
+        with open(csv_path, newline='') as csvfile, open(clean_path, newline='') as cleanfile:
+            reader = csv.reader(csvfile)
+            clean_reader = csv.reader(cleanfile)
+
+            # Read headers
+            current_headers = next(reader)
+
+            if headers is None:
+                # Initialize headers with "Selector" and "Match" added
+                headers = current_headers + ["Selector"] + ["Label"]
+
+            # Read through rows
+            csv_row = None
+            clean_row = None
+
+            for i, (csv_row_data, clean_row_data) in enumerate(zip(reader, clean_reader), start=1):
+                if i == row_number:
+                    csv_row = csv_row_data
+                    clean_row = clean_row_data
+                    break
+
+            if csv_row and clean_row:
+                # Get values to compare
+                csv_value = csv_row[column_index]
+                clean_value = clean_row[column_index]
+                label = csv_value == clean_value
+
+                # Append processed row
+                selector_value = column_index
+                processed_row = csv_row + [selector_value] + [label]
+                processed_rows.append(processed_row)
+
+    # Write the processed rows to a new CSV file
+    with open(output_csv, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(headers)
+        writer.writerows(processed_rows)

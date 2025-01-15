@@ -1,0 +1,3 @@
+index,id,beer_name,style,ounces,abv,ibu,brewery_id,brewery_name,city,state,Selector,Label
+1,1436,Pub Beer,American Pale Lager,12.0 oz,0.05,N/A,408,10 Barrel Brewing Company,Bend,OR,4,1
+39,9,Hell or High Watermelon Wheat,Fruit / Vegetable Beer,12.0 oz.,0.049,17,368,21st Amendment Brewery,San Francisco,CA,8,0

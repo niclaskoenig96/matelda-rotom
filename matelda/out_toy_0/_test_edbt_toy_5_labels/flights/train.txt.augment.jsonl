@@ -1,0 +1,2 @@
+{"sid": 0, "original": "COL sched_dep_time VAL nan ", "augment": ["COL sched_dep_time VAL 6:55 p.m.", "COL sched_dep_time VAL nan", "COL sched_dep_time VAL 4:54 p.m.", "COL sched_dep_time VAL 2:25 p.m.", "COL sched_dep_time VAL 1:55 p.m."], "label": "1"}
+{"sid": 1, "original": "COL src VAL aa ", "augment": ["COL src VAL aa"], "label": "0"}

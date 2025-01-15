@@ -1,0 +1,2 @@
+COL sched_dep_time VAL nan 	1
+COL src VAL aa 	0

@@ -1,0 +1,2 @@
+COL ounces VAL 12.0 oz 	1
+COL brewery_name VAL 21st Amendment Brewery 	0

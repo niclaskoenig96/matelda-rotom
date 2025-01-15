@@ -1,0 +1,2 @@
+{"sid": 0, "original": "COL ounces VAL 12.0 oz ", "augment": ["COL ounces VAL 12.0 oz.", "COL ounces VAL 12.0 oz", "COL abv VAL 0.035 oz."], "label": "1"}
+{"sid": 1, "original": "COL brewery_name VAL 21st Amendment Brewery ", "augment": ["COL brewery_id VAL 21st Amendment Brewery", "COL brewery_name VAL 21st Amendment Brewery", "COL brewery_id VAL 216"], "label": "0"}
